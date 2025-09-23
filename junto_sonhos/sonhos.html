@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dia Mundial do Sonho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            padding-bottom: 100px;
+
+            /* Fundo animado */
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+            background-size: 400% 400%;
+            animation: gradientBG 18s ease infinite;
+            color: #f2f2f2;
+        }
+
+        /* Animação do fundo */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+                        url("https://media.meer.com/attachments/73473d12394c272df9eabf1577853e4ecb1829dd/store/fill/1090/613/ef46fb17fa3b2122f869c19065a1fdf7d732a751c83bcefaf3f4f2db72f1/O-sonho-comanda-a-vida.jpg") no-repeat center/cover;
+            text-align: center;
+            padding: 100px 20px;
+            margin: 0 15%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .banner h1 {
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 2px 2px 8px black;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 1.4em;
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+
+        .banner button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: white;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .banner button:hover {
+            transform: scale(1.08);
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
+        }
+
+        /* Conteúdo */
+        .sobre, .porque, .celebrar, section {
+            margin: 50px 15%;
+            padding: 30px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        .sobre h2, .porque h3, section h2, .celebrar h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        p, li {
+            line-height: 1.8;
+            color: #f0f0f0;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* Lista */
+        .celebrar ul {
+            padding-left: 20px;
+        }
+        .celebrar ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #111;
+            padding: 12px 20px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer-inner {
+            font-size: 0.9rem;   
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ucb {
+            width: 100px;
+            opacity: 0.85;
+        }
+
+        /* Animações */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <header class="banner">
+        <h1>Dia Mundial do Sonho</h1>
+        <p>Sonhar é recordar quem somos além do tempo.</p>
+        <a href="#celebrar">
+            <button>Como celebrar</button>
+        </a>
+    </header>
+
+    <div class="sobre">
+        <h2>O que é?</h2>
+        <p>
+            O Dia Mundial do Sonho, ou World Dream Day, celebra-se a 25 de setembro e foi criado em 2002 com o propósito de inspirar as pessoas a refletir sobre os seus objetivos e a encontrar formas de os alcançar, contribuindo para a melhoria do mundo. 
+            A data visa encorajar a partilha de ideias e recursos para a realização de sonhos individuais e coletivos, unindo indivíduos e grupos para concretizar aspirações e metas.
+        </p>
+    </div>
+
+    <div class="porque">
+        <h3>Por que Celebrar?</h3>
+        <p>
+            A celebração do Dia Mundial do Sonho é uma oportunidade para nos lembrarmos da importância de ter sonhos e de perseguir aquilo que nos inspira. 
+            É um momento para parar e pensar nas metas que temos para o futuro e refletir sobre como podemos alcançá-las.
+        </p>
+    </div>
+
+    <section id="importancia">
+        <h2>Por que sonhar importa?</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>🌟 Motivação</h3>
+            <p>Sonhos nos impulsionam a agir, trazendo propósito e energia para projetos de longo prazo.</p>
+          </div>
+          <div class="card">
+            <h3>🎨 Criatividade</h3>
+            <p>Os sonhos são fonte de ideias originais e conexões inesperadas que alimentam inovação.</p>
+          </div>
+          <div class="card">
+            <h3>💖 Saúde emocional</h3>
+            <p>Refletir sobre sonhos ajuda a organizar emoções, expectativas e a reduzir ansiedade.</p>
+          </div>
+        </div>
+    </section>
+
+    <div class="celebrar" id="celebrar">
+        <h2>Como Celebrar?</h2>
+        <p>Há várias formas de celebrar o Dia Mundial do Sonho:</p>
+        <ul>
+            <li>Reserve um tempo para refletir sobre seus objetivos pessoais.</li>
+            <li>Compartilhe seus sonhos com amigos, familiares ou colegas.</li>
+            <li>Escreva seus sonhos em um caderno ou mural.</li>
+            <li>Participe de atividades criativas como pintura, escrita ou música.</li>
+            <li>Contribua para projetos coletivos que tornem os sonhos de outros possíveis.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+          <span>Aluno: <strong>Guilherme Magalhães</strong></span>
+          <img src="https://static.wixstatic.com/media/bf845a_0f1dab369d154de08d3cacb7975432bd~mv2.png/v1/fill/w_1280,h_820,al_c/logo%20ucb.png" alt="Logo UCB" class="ucb">
+        </div>
+    </footer>
+
+</body>
+</html>

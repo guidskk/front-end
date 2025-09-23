@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trânsito</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)),
+                        url("https://www.metagal.com.br/blog/wp-content/uploads/2024/06/BLOGPOST2-JUN-PARTE1-METAGAL.png") center/cover no-repeat;
+        }
+
+        /* Banner */
+        .banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)),
+                        url("") center/cover no-repeat;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+
+        .banner strong {
+            font-size: 28px;
+            font-family: Georgia, 'Times New Roman', serif;
+            letter-spacing: 1px;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #ffd43b;
+        }
+
+        /* Conteúdo principal */
+        main {
+            margin: 40px 15%;
+            padding: 30px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Sessões */
+        .sobre, .importancia, .dicas {
+            margin-bottom: 40px;
+            padding: 25px;
+            border-radius: 12px;
+            background-color: #fafafa;
+            border-left: 6px solid #ffd43b;
+            transition: transform 0.2s;
+        }
+
+        .sobre:hover, .importancia:hover, .dicas:hover {
+            transform: translateY(-4px);
+            background-color: #fffbea;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #444;
+        }
+
+        h3 {
+            color: #555;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            background-color: #fff8dc;
+        }
+
+        /* Listas */
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #222;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+   <header class="banner"> <!-- banner -->
+    <strong>Trânsito</strong>
+    <nav class="menu">
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#importancia">Importância</a></li>
+            <li><a href="#dicas">Dicas</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main> <!-- informações main -->
+        <div class="sobre" id="sobre">
+            <h1>O que é o trânsito</h1>
+            <p>O trânsito é a utilização e a movimentação de pessoas, veículos e animais nas vias públicas (ruas, estradas, calçadas, etc.) para fins de deslocamento, circulação, parada e estacionamento. Ele envolve um conjunto de regras, sinalizações e comportamentos para organizar esse movimento de forma segura e eficiente, garantindo que todos compartilhem o mesmo espaço de forma responsável. </p>
+            <strong><p>Elementos que compõem o trânsito:</p></strong>
+            <li><strong>Pessoas:</strong>Pedestres que andam a pé nas calçadas, ciclistas que usam bicicletas, e condutores de veículos como carros, motos, ônibus, etc. </li>
+            <li><strong>Veículos:</strong>Incluem todos os tipos de meios de transporte, como carros, motocicletas, bicicletas, patinetes, ônibus, etc. </li>
+            <li><strong>Animais:</strong>Em alguns casos, animais também são considerados parte do trânsito. </li>
+            <li><strong>Vias:</strong>Onde ocorre o movimento, como ruas, avenidas, estradas, rodovias, acostamentos e calçadas. </li>
+        </div>
+
+        <div class="importancia" id="importancia">
+            <h1>Importância do trânsito na Vida das Pessoas</h1>
+            <p>Não existe bem-estar social sem segurança no trânsito. Quando você sai de casa, seja pra ir ao trabalho, levar seu filho à escola, viajar ou com qualquer outro objetivo, tem direito a se deslocar em segurança.</p>
+            <strong><p>Aspectos essenciais do trânsito para as pessoas:</p></strong>
+            <div class="cards">
+                <div class="card">
+                    <h3>Mobilidade e Acesso: </h3>
+                    <p>O trânsito possibilita o deslocamento diário, seja para trabalhar, estudar, fazer compras ou usufruir de serviços, sendo crucial para a vida urbana e o acesso a diversas oportunidades. </p>
+                </div>
+                <div class="card">
+                    <h3>Economia:</h3>
+                    <p>A movimentação de pessoas e mercadorias é vital para a economia, impactando o comércio, a produção e a geração de empregos em setores como o transporte e os serviços. </p>
+                </div>
+                <div class="card">
+                    <h3>Bem-Estar Social:</h3>
+                    <p>A segurança no trânsito é uma questão de bem-estar, garantindo que as pessoas possam se locomover com segurança, sem medo de acidentes, lesões ou mortes. </p>
+                </div>
+            </div>
+
+            <div class="dicas" id="dicas">
+                <h1>Dicas para um Trânsito Seguro</h1>
+                <p>Para ter um trânsito seguro, evite distrações como o uso do celular, respeite os limites de velocidade e a sinalização, mantenha uma distância segura dos outros veículos e cuide da manutenção preventiva do seu carro. Além disso, nunca dirija sob a influência de álcool ou drogas, use sempre o cinto de segurança e mostre cortesia e paciência com outros motoristas e pedestres. </p>
+                <strong><p>Regras e Práticas Essenciais:</p></strong>
+                <ul>
+                    <li><strong>Atenção Total:</strong>Mantenha o foco na condução e evite o uso do celular e outros dispositivos que possam causar distração, pois o uso do telemóvel pode aumentar o risco de acidentes.</li>
+                    <li><strong>Respeito aos Limites:</strong>Cumpra os limites de velocidade e a sinalização viária, pois isso garante mais tempo para reagir em situações inesperadas e evita acidentes. </li>
+                    <li><strong>Cinto de Segurança:</strong>Utilize o cinto de segurança em todos os ocupantes do veículo, tanto nos bancos dianteiros quanto nos traseiros. </li>
+                    <li><strong>Condições de Saúde:</strong> Descanse bem antes de dirigir, pois o sono e o cansaço comprometem a segurança e aumentam o risco de acidentes. </li>
+                    <li><strong>Condução Sob Efeito de Substâncias:</strong> Não conduza sob a influência de álcool ou drogas, pois são prejudiciais à segurança e reduzem o tempo de reação. </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
