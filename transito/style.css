@@ -150,3 +150,12 @@ footer {
     transform: translateY(-4px);
     background-color: #fffbea;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+}
