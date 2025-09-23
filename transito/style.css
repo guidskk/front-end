@@ -122,3 +122,31 @@ footer {
     color: white;
     font-size: 14px;
 }
+
+.mundial {
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    border-left: 6px solid #ffd43b;
+    transition: transform 0.2s;
+}
+
+.mundial:hover {
+    transform: translateY(-4px);
+    background-color: #fffbea;
+}
+
+.brasil { 
+    margin-bottom: 40px;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #fafafa;
+    border-left: 6px solid #ffd43b;
+    transition: transform 0.2s;
+}
+
+.brasil:hover {
+    transform: translateY(-4px);
+    background-color: #fffbea;
+}
