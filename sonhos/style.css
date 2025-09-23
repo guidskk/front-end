@@ -18,8 +18,6 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-
-
 /* Banner */
 .banner {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
@@ -29,7 +27,7 @@ body {
     margin: 0 15%;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    animation: fadeIn 1.5s ease-in; /* Animação no banner */
+    animation: fadeIn 1.5s ease-in;
 }
 
 .banner h1 {
@@ -56,12 +54,13 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .banner button:hover {
     transform: scale(1.08);
     background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
 
-/* Conteúdo */
+/* Seções principais */
 .sobre, .porque, .celebrar, section {
     margin: 50px 15%;
     padding: 30px;
@@ -99,16 +98,109 @@ p, li {
     box-shadow: 0 6px 18px rgba(0,0,0,0.5);
     transition: transform 0.3s ease;
 }
+
 .card:hover {
     transform: translateY(-8px);
 }
 
-/* Lista */
 .celebrar ul {
     padding-left: 20px;
 }
+
 .celebrar ul li {
-    margin-bottom: 10px;
+    margin: 12px 0;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.timeline ul li {
+    margin: 15px 0;
+    padding: 12px 18px;
+    background: rgba(255,255,255,0.08);
+    border-left: 4px solid #00c6ff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.timeline ul li:hover {
+    transform: translateX(8px);
+}
+
+/* Frases inspiradoras */
+.frases blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 20px auto;
+    padding: 15px 20px;
+    border-left: 5px solid #0072ff;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    max-width: 800px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;            
+}
+
+.frases blockquote:hover {
+    transform: scale(1.03);
+    background: rgba(255,255,255,0.12);
+    border-left: 5px solid #00c6ff;
+    box-shadow: 0 6px 18px rgba(0, 198, 255, 0.4);
+}
+
+/* Formulário */
+.compartilhe form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.compartilhe input, .compartilhe textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.compartilhe textarea {
+    resize: none;
+}
+
+.compartilhe button {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.compartilhe button:hover {
+    transform: scale(1.05);
+}
+
+.curiosidades ul {
+    padding-left: 20px;
+}
+
+.curiosidades ul li {
+    margin: 12px 0;
+    padding: 10px 15px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 8px;
 }
 
 /* Footer */
