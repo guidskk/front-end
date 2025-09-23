@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Dia Mundial do Sonho</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    
+
     <style>
         body {
             margin: 0;
@@ -62,12 +62,13 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .banner button:hover {
             transform: scale(1.08);
             background: linear-gradient(135deg, #0072ff, #00c6ff);
         }
 
-        /* Conteúdo */
+        /* Seções principais */
         .sobre, .porque, .celebrar, section {
             margin: 50px 15%;
             padding: 30px;
@@ -105,16 +106,109 @@
             box-shadow: 0 6px 18px rgba(0,0,0,0.5);
             transition: transform 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-8px);
         }
 
-        /* Lista */
         .celebrar ul {
             padding-left: 20px;
         }
+
         .celebrar ul li {
-            margin-bottom: 10px;
+            margin: 12px 0;
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
+        }
+
+        .timeline ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .timeline ul li {
+            margin: 15px 0;
+            padding: 12px 18px;
+            background: rgba(255,255,255,0.08);
+            border-left: 4px solid #00c6ff;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline ul li:hover {
+            transform: translateX(8px);
+        }
+
+        /* Frases inspiradoras */
+        .frases blockquote {
+            font-size: 1.2em;
+            font-style: italic;
+            margin: 20px auto;
+            padding: 15px 20px;
+            border-left: 5px solid #0072ff;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            max-width: 800px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;            
+        }
+
+        .frases blockquote:hover {
+            transform: scale(1.03);
+            background: rgba(255,255,255,0.12);
+            border-left: 5px solid #00c6ff;
+            box-shadow: 0 6px 18px rgba(0, 198, 255, 0.4);
+        }
+
+        /* Formulário */
+        .compartilhe form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .compartilhe input, .compartilhe textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .compartilhe textarea {
+            resize: none;
+        }
+
+        .compartilhe button {
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .compartilhe button:hover {
+            transform: scale(1.05);
+        }
+
+        .curiosidades ul {
+            padding-left: 20px;
+        }
+
+        .curiosidades ul li {
+            margin: 12px 0;
+            padding: 10px 15px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 8px;
         }
 
         /* Footer */
@@ -200,6 +294,23 @@
         </div>
     </section>
 
+    <section class="timeline">
+        <h2>Linha do Tempo do Dia Mundial do Sonho</h2>
+        <ul>
+            <li><strong>2002:</strong> Criação da data por Ozioma Egwuonwu, nos EUA.</li>
+            <li><strong>2005:</strong> Primeiras celebrações internacionais.</li>
+            <li><strong>2015:</strong> O evento alcança mais de 30 países.</li>
+            <li><strong>2023:</strong> Movimentos digitais de compartilhamento de sonhos se popularizam.</li>
+        </ul>
+    </section>
+
+    <section class="frases">
+        <h2>Frases Inspiradoras</h2>
+        <blockquote>“Todos os nossos sonhos podem se tornar realidade se tivermos coragem de persegui-los.” – Walt Disney</blockquote>
+        <blockquote>“Nunca desista de um sonho só por causa do tempo que levará para realizá-lo. O tempo vai passar de qualquer forma.” – Earl Nightingale</blockquote>
+        <blockquote>“Um sonho é apenas um sonho. Uma meta é um sonho com um plano e um prazo.” – Harvey Mackay</blockquote>
+    </section>
+
     <div class="celebrar" id="celebrar">
         <h2>Como Celebrar?</h2>
         <p>Há várias formas de celebrar o Dia Mundial do Sonho:</p>
@@ -211,6 +322,29 @@
             <li>Contribua para projetos coletivos que tornem os sonhos de outros possíveis.</li>
         </ul>
     </div>
+
+    <section class="compartilhe">
+        <h2>Compartilhe seu sonho</h2>
+        <form>
+            <label for="nome">Seu nome:</label><br>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome"><br><br>
+
+            <label for="sonho">Seu sonho:</label><br>
+            <textarea id="sonho" name="sonho" rows="4" placeholder="Escreva aqui..."></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section class="curiosidades">
+        <h2>Curiosidades sobre Sonhos</h2>
+        <ul>
+            <li>Em média, passamos 6 anos da nossa vida sonhando.</li>
+            <li>90% dos sonhos são esquecidos nos primeiros 10 minutos após acordar.</li>
+            <li>Animais também sonham, especialmente cães e gatos.</li>
+            <li>Pessoas cegas também sonham, mas utilizam sons, cheiros e sensações.</li>
+        </ul>
+    </section>
 
     <footer>
         <div class="footer-inner">
