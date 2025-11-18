@@ -1,0 +1,227 @@
+/* ============================
+   GERAL
+============================ */
+body.contato-page {
+    margin: 0;
+    background: #eef3f7;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #003a70;
+}
+
+/* ============================
+   ANIMAÇÃO DE ENTRAR NA PÁGINA
+============================ */
+.fade-in {
+    animation: fadeIn 0.9s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* ============================
+   BANNER 
+============================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003a70;
+    padding: 12px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 60px;
+    transition: 0.4s ease;
+}
+
+.titulo-site {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+/* ============================
+   CONTAINER
+============================ */
+.container {
+    background: white;
+    width: 80%;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    color: #003a70;
+    margin-bottom: 10px;
+}
+
+.texto {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #044d88;
+}
+
+/* ============================
+   BOX PRINCIPAL 
+============================ */
+.contato-box {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ============================
+   FORMULÁRIO
+============================ */
+.formulario {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: #003a70;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #d2d8e0;
+    background: #f7f9fc;
+    font-size: 16px;
+    resize: none;
+    transition: border 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #003a70;
+    outline: none;
+}
+
+.formulario textarea {
+    height: 120px;
+}
+
+/* BOTÃO */
+.btn-enviar {
+    background: #003a70;
+    color: white;
+    padding: 14px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+/* ============================
+   INFORMAÇÕES
+============================ */
+.info {
+    flex: 1;
+    padding: 25px;
+    border-radius: 14px;
+    background: white;
+    border-left: 6px solid #003a70;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.info h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #003a70;
+}
+
+.info p {
+    font-size: 17px;
+    color: #003a70;
+    margin-bottom: 12px;
+}
+
+.dev {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #d2d8e0;
+}
+
+.dev h4 {
+    margin-bottom: 5px;
+    color: #003a70;
+}
+
+/* ============================
+   RESPONSIVO
+============================ */
+@media (max-width: 900px) {
+    .contato-box {
+        flex-direction: column;
+    }
+
+    .info, .formulario {
+        width: 100%;
+    }
+}
+
+/* ============================
+   RODAPÉ 
+============================ */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #003a70;
+    color: white;
+    padding: 15px;
+}

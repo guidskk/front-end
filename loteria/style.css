@@ -1,0 +1,209 @@
+/* ============================
+   GERAL
+============================ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2f5;
+    color: #003a70;
+    padding-bottom: 160px;
+}
+
+/* Animação */
+.pagina-container {
+    animation: fadeSlide 0.9s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================
+   BANNER
+============================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003a70;
+    padding: 12px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.logo {
+    height: 60px;
+    transition: 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-site {
+    color: white;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+
+/* Título padrão como antes */
+.titulo-bemvindo {
+    margin-top: 0;
+    font-size: 24px;
+    color: #003a70;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* ============================
+   CARD DESCRIÇÃO
+============================ */
+.Loteria {
+    margin: 40px auto;
+    width: 80%;
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+}
+
+/* ============================
+   PRODUTOS (CARDS)
+============================ */
+.produtos {
+    margin: 30px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.produto {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    border-left: 10px solid transparent;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.15);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ÍCONES */
+.icon-loteria {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+/* CORES OFICIAIS */
+.mega { border-color: #209869; }
+.quina { border-color: #260085; }
+.lotofacil { border-color: #930089; }
+.dupla { border-color: #b50000; }
+
+/* BRILHO */
+.produto::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+    transition: 0.6s;
+}
+
+.produto:hover::after {
+    left: 130%;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ============================
+   RODAPÉ FIXO
+============================ */
+.rodape {
+    background: #003a70;
+    color: white;
+    padding-top: 30px;
+    margin-top: 40px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.rodape a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.rodape a:hover {
+    color: #ff9c00;
+}
+
+.rodape-final {
+    margin-top: 20px;
+    padding: 15px 0;
+    text-align: center;
+    background: #00264d;
+    font-size: 14px;
+}
+
+/* ============================
+   RESPONSIVIDADE
+============================ */
+@media (max-width: 900px) {
+    .banner { flex-direction: column; }
+}

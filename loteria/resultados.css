@@ -1,0 +1,168 @@
+/* ============================
+   GERAL
+============================ */
+body.resultados-page {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    color: #003a70;
+}
+
+/* ============================
+   BANNER 
+============================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003a70; /* Azul padrão */
+    padding: 12px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 60px;
+    transition: 0.4s ease;
+}
+
+.titulo-site {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+/* ============================
+   CONTAINER
+============================ */
+.container {
+    background: white;
+    margin: 40px 10%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 32px;
+    color: #003a70;
+}
+
+/* ============================
+   BLOCOS DE RESULTADOS
+============================ */
+.bloco {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.header-jogo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-jogo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Bolas */
+.bola {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-weight: bold;
+    margin: 4px;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.bola:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+
+.bola.mega {
+    background: #0faa4a;
+}
+
+.bola.lotofacil {
+    background: #d42cc7;
+}
+
+/* ============================
+   QUINA
+============================ */
+.bola.quina {
+    background: #26008a; /* Roxo oficial */
+}
+
+/* ============================
+   MEGA DA VIRADA
+============================ */
+.bola.virada {
+    background: #0faa4a; /* Mesmo verde da Mega-Sena */
+}
+
+/* ============================
+   DUPLA SENA
+============================ */
+.bola.dupla {
+    background: #b50000; /* Vermelho oficial */
+}
+
+/* ============================
+   FOOTER 
+============================ */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #003a70;
+    color: white;
+    padding: 15px;
+}

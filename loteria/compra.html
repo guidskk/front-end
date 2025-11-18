@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra – Loterias Esperança</title>
+
+    <link rel="stylesheet" href="compra.css">
+</head>
+
+<body>
+
+   <!-- BANNER / MENU -->
+    <header class="banner" id="inicio">
+        <div class="logo-area">
+            <img class="logo" src="https://www.freepnglogos.com/uploads/logo-caixa-png/caixa-download-png-5.png" alt="logo">
+            <h1 class="titulo-site">Loterias Esperança</h1>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="loteria.html">Início</a></li>
+                <li><a href="boloes.html">Bolões</a></li>
+                <li><a href="mega-sena.html">Mega-Sena</a></li>
+                <li><a href="como-jogar.html">Como Jogar</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ======== CONTEÚDO ======== -->
+    <main class="compra-container fade-in">
+
+        <h1 class="titulo-pagina">Finalizar Compra</h1>
+        <p class="subtitulo">Selecione a loteria, escolha suas dezenas e confirme o pagamento.</p>
+
+        <!-- Card de seleção da loteria -->
+        <section class="card-compra">
+            <h2>Escolha a Loteria</h2>
+
+            <div class="opcoes-loterias">
+
+                <label class="opcao">
+                    <input type="radio" name="loteria" value="mega" checked>
+                    <span>Mega-Sena (6 números)</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="loteria" value="quina">
+                    <span>Quina (5 números)</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="loteria" value="lotofacil">
+                    <span>Lotofácil (15 números)</span>
+                </label>
+
+                <label class="opcao">
+                    <input type="radio" name="loteria" value="dupla">
+                    <span>Dupla Sena (6 números)</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- Card de dezenas -->
+        <section class="card-compra">
+            <h2>Escolha suas Dezenas</h2>
+            <p>Clique para selecionar os números desejados.</p>
+
+            <button id="clearBtn" class="btn-limpar">Limpar Seleção</button>
+
+            <div class="grade-numeros" id="gradeNumeros"></div>
+        </section>
+
+        <!-- Card pagamento -->
+        <section class="card-compra">
+            <h2>Pagamento</h2>
+
+            <div class="pagamento-opcoes">
+                <label class="opcao"><input type="radio" name="pagamento" value="credito"><span>Cartão de Crédito</span></label>
+                <label class="opcao"><input type="radio" name="pagamento" value="pix"><span>PIX</span></label>
+                <label class="opcao"><input type="radio" name="pagamento" value="boleto"><span>Boleto Bancário</span></label>
+            </div>
+
+            <button class="btn-comprar">Confirmar Compra</button>
+        </section>
+
+    </main>
+
+     <!-- RODAPÉ PADRÃO -->
+    <footer class="footer">
+        <p>© 2025 Loterias Esperança — Desenvolvido por: Guilherme Magalhães UCB.</p>
+    </footer>
+
+    <!-- =====================================================
+                            JAVASCRIPT
+    ====================================================== -->
+    <script>
+        const grade = document.getElementById("gradeNumeros");
+        const clearBtn = document.getElementById("clearBtn");
+
+        // Quantidade permitida por loteria
+        const limites = {
+            mega: 6,
+            quina: 5,
+            lotofacil: 15,
+            dupla: 6
+        };
+
+        let limiteAtual = 6;
+        let selecionados = [];
+
+        // Atualiza limite quando trocar a loteria
+        document.querySelectorAll("input[name='loteria']").forEach(radio => {
+            radio.addEventListener("change", () => {
+                limiteAtual = limites[radio.value];
+                limparSelecao();
+            });
+        });
+
+        // Criar números 01–60
+        function gerarNumeros() {
+            for (let i = 1; i <= 60; i++) {
+                let num = document.createElement("div");
+                num.classList.add("numero");
+                num.textContent = String(i).padStart(2, "0");
+
+                num.addEventListener("click", () => selecionarNumero(num));
+
+                grade.appendChild(num);
+            }
+        }
+
+        gerarNumeros();
+
+        // Seleção animada
+        function selecionarNumero(elemento) {
+            const numero = elemento.textContent;
+
+            // Se já está marcado → desmarcar
+            if (elemento.classList.contains("selecionado")) {
+                elemento.classList.remove("selecionado");
+                selecionados = selecionados.filter(n => n !== numero);
+                return;
+            }
+
+            // Bloquear se atingiu o limite
+            if (selecionados.length >= limiteAtual) {
+                alert(`Limite atingido: ${limiteAtual} números permitidos.`);
+                return;
+            }
+
+            // Marcar
+            elemento.classList.add("selecionado");
+            selecionados.push(numero);
+        }
+
+        // Botão limpar
+        function limparSelecao() {
+            selecionados = [];
+            document.querySelectorAll(".numero").forEach(n => n.classList.remove("selecionado"));
+        }
+
+        clearBtn.addEventListener("click", limparSelecao);
+    </script>
+
+</body>
+</html>

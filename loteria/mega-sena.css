@@ -1,0 +1,230 @@
+/* ============================
+   GERAL
+============================ */
+body.mega-page {
+    margin: 0;
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    color: #003a70;
+}
+
+/* ============================
+   BANNER PADRÃO DA HOME
+============================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003a70;
+    padding: 12px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.logo {
+    height: 60px;
+    transition: 0.4s ease;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-site {
+    color: white;
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+/* ============================
+   CONTAINER
+============================ */
+.container {
+    background: white;
+    margin: 40px 10%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 32px;
+    color: #003a70;
+    margin-top: 0;
+}
+
+.premio {
+    text-align: center;
+    font-size: 28px;
+}
+
+.premio span {
+    color: #209869;
+    font-weight: bold;
+}
+
+.sub {
+    text-align: center;
+}
+
+/* ============================
+   TABELA CARTAZ CAIXA
+============================ */
+.tabela-card {
+    background: #ffffff;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid #003a70;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    margin-top: 20px;
+}
+
+.tabela-card table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.tabela-card thead {
+    background: #003a70;
+    color: #fff;
+}
+
+.tabela-card thead th {
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.tabela-card tbody tr {
+    border-bottom: 2px solid #eaeaea;
+}
+
+.tabela-card tbody td {
+    padding: 14px;
+    font-weight: bold;
+}
+
+/* Laterais coloridas estilo Caixa */
+.tabela-card tbody tr:nth-child(1) td:first-child { background: #209869; color: #fff; }
+.tabela-card tbody tr:nth-child(2) td:first-child { background: #dfa70c; color: #fff; }
+.tabela-card tbody tr:nth-child(3) td:first-child { background: #260085; color: #fff; }
+.tabela-card tbody tr:nth-child(4) td:first-child { background: #bd1313; color: #fff; }
+.tabela-card tbody tr:nth-child(5) td:first-child { background: #0174C8; color: #fff; }
+.tabela-card tbody tr:nth-child(6) td:first-child { background: #8f017c; color: #fff; }
+
+/* TOTAL */
+.total-area {
+    margin-top: 15px;
+    padding: 15px;
+    background: #003a70;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ============================
+   BRINDES
+============================ */
+.brinde-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 6px solid #209869;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.brinde-card h3 {
+    margin-top: 0;
+    color: #209869;
+    font-size: 24px;
+}
+
+.brinde-card p {
+    margin: 5px 0 0 0;
+    font-size: 17px;
+}
+
+/* ============================
+   CONTATOS
+============================ */
+.contatos-card {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    border-left: 6px solid #003a70;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.contatos-card h3 {
+    margin-top: 0;
+}
+
+/* BOTÃO COMPRAR (abaixo do total) */
+.btn-comprar-mega {
+    display: block;
+    width: 260px;
+    margin: 20px auto;
+    text-align: center;
+    background: #F39200; /* Laranja Caixa */
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 14px 0;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-comprar-mega:hover {
+    background: #ffac33;
+    transform: scale(1.05);
+}
+
+
+/* ============================
+   RODAPÉ
+============================ */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #003a70;
+    color: white;
+    padding: 15px;
+}

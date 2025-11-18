@@ -1,0 +1,211 @@
+/* ============================
+   GERAL
+============================ */
+body.boloes-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    color: #003a70;
+    padding-bottom: 160px;
+}
+
+/* ============================
+   BANNER / MENU PADRÃO 
+============================ */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #003a70;
+    padding: 12px 10%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+.logo {
+    height: 60px;
+    transition: 0.4s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titulo-site {
+    color: white;
+    text-transform: uppercase;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+/* MENU */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #ff9c00;
+    color: #003a70;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVIDADE DO BANNER */
+@media (max-width: 900px) {
+    .banner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        height: 48px;
+    }
+
+    .titulo-site {
+        font-size: 20px;
+    }
+
+    .menu a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+}
+
+/* ============================
+   CONTAINERS INTERNOS 
+============================ */
+.container {
+    margin: 40px 10%;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   LISTA DE BOLÕES 
+============================ */
+.boloes-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.bolao-item {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 8px solid #003a70;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+/* Cores das bordas no padrão */
+.bolao-item:nth-child(1) { border-color: #209869; }
+.bolao-item:nth-child(2) { border-color: #dfa70c; }
+.bolao-item:nth-child(3) { border-color: #260085; }
+.bolao-item:nth-child(4) { border-color: #bd1313; }
+
+/* ANIMAÇÃO BRILHO  */
+.bolao-item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: 0.5s;
+}
+
+.bolao-item:hover::after {
+    left: 120%;
+}
+
+.bolao-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Botão */
+.bolao-item button {
+    width: 100%;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    background: #ff9c00;
+    color: #003a70;
+    transition: 0.3s;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bolao-item button:hover {
+    background: #e58a00;
+}
+
+/* ============================
+   RODAPÉ
+============================ */
+.footer {
+    text-align: center;
+    background: #003a70;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
